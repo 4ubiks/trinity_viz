@@ -1,6 +1,6 @@
 import socket
 
-host, port = "127.0.0.1", 25001
+host, port = "127.0.0.1", 5000
 data = "1,2,3"
 
 # SOCK_STREAM means TCP socket
