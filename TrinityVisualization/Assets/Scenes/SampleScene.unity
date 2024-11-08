@@ -5777,8 +5777,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1445359712}
+  - component: {fileID: 1445359713}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SocketListener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5799,6 +5800,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1445359713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445359711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1741b45749690594a9bd375ae091a24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectionPort: 5000
 --- !u!1 &1491927354 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 25dbe35763d26ef49a03b4ec334f1a61, type: 3}
