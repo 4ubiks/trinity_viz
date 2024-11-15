@@ -73,6 +73,6 @@ def live_data_th() -> th.Thread:
     return t
 
 if __name__ == '__main__':
-    connect_serial('COM4')
+    connect_serial('COM3')
 else:
     print("'live_dtat.py' imported.")
