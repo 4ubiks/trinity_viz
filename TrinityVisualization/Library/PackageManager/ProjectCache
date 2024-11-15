@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638652052224439396
-    m_Hash: 186146219
+      ticks: 638672277078730348
+    m_Hash: 3449129464
   m_LockFileStatus:
     m_FilePath: C:/Users/Cayden Park/Documents/trinity_viz/TrinityVisualization/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638652052224474421
-    m_Hash: 546457954
+      ticks: 638672277078760371
+    m_Hash: 417046449
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -775,6 +775,93 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 3.2.2
+    nextVersion: 
+- packageId: com.unity.scripting.python@7.0.2
+  testable: 0
+  isDirectDependency: 1
+  version: 7.0.2
+  source: 1
+  resolvedPath: C:\Users\Cayden Park\Documents\trinity_viz\TrinityVisualization\Library\PackageCache\com.unity.scripting.python@7.0.2
+  assetPath: Packages/com.unity.scripting.python
+  name: com.unity.scripting.python
+  displayName: Python Scripting
+  author:
+    name: 
+    email: 
+    url: 
+  category: Editor
+  type: 
+  description: 'Optimize Unity Editor workflows for your VFX/animation pipelines
+    using Python scripting:
+
+    - Automate repetitive tasks to speed up your artistic
+    process.
+
+    - Integrate your custom pipeline tools within Unity.
+
+    - Increase
+    interoperability with other software of your pipeline.
+
+    This package includes
+    and uses Python 3.10.6 and Python for .NET 3.0.0.0 and is Editor-only (not available
+    in runtime builds).'
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 2.0.0-preview.6
+    - 2.0.1-preview.2
+    - 2.1.0-preview.1
+    - 2.1.1-preview.1
+    - 4.0.0-exp.5
+    - 4.0.0-pre.1
+    - 5.0.0-pre.5
+    - 6.0.0
+    - 6.0.1
+    - 7.0.0-pre.1
+    - 7.0.0
+    - 7.0.1
+    - 7.0.2
+    compatible:
+    - 2.0.0-preview.6
+    - 2.0.1-preview.2
+    - 2.1.0-preview.1
+    - 2.1.1-preview.1
+    - 4.0.0-exp.5
+    - 4.0.0-pre.1
+    - 5.0.0-pre.5
+    - 6.0.0
+    - 6.0.1
+    - 7.0.0-pre.1
+    - 7.0.0
+    - 7.0.1
+    - 7.0.2
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - python
+  - python.net
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638639794727160000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.scripting.python@7.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.scripting.python.git
+    revision: f39605488a7d83dd636e9fb4ad4b006bc7b75cd3
+    path: 
+  unityLifecycle:
+    version: 
     nextVersion: 
 - packageId: com.unity.test-framework@1.1.33
   testable: 0

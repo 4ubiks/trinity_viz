@@ -3,19 +3,32 @@ using System.Net.Sockets;
 using System.Text;
 using UnityEngine;
 using System.Threading;
+using System.Diagnostics;
 
 public class SocketListener : MonoBehaviour {
-	Thread thread;
 	public int connectionPort = 5000;
-	TcpListener server;
-	TcpClient client;
-	bool running;
+
+	private Thread thread;
+	private TcpListener server;
+	private TcpClient client;
+	private bool running;
+
+	private Process pythonProcess;
 
 	void Start() {
 		// Receive on a separate thread so Unity doesn't freeze waiting for data
 		ThreadStart ts = new ThreadStart(GetData);
 		thread = new Thread(ts);
 		thread.Start();
+
+		pythonProcess = new Process();
+		pythonProcess.StartInfo.FileName = "'C:/Users/Cayden Park/AppData/Local/Programs/Python/Launcher/py.exe";  // or "python3" if you're on macOS/Linux
+		pythonProcess.StartInfo.Arguments = $"{Application.dataPath}/Scripts/Python/pythonRocket.py";  // Full path to the Python file
+		pythonProcess.StartInfo.UseShellExecute = false;
+		pythonProcess.StartInfo.RedirectStandardOutput = true;
+		pythonProcess.StartInfo.CreateNoWindow = true;
+
+		pythonProcess.Start();
 	}
 
 	void GetData() {
@@ -54,7 +67,7 @@ public class SocketListener : MonoBehaviour {
 
 	// Use-case specific function, need to re-write this to interpret whatever data is being sent
 	public static Vector3 ParseData(string dataString) {
-		Debug.Log(dataString);
+        UnityEngine.Debug.Log(dataString);
 		// Remove the parentheses
 		if (dataString.StartsWith("(") && dataString.EndsWith(")")) {
 			dataString = dataString.Substring(1, dataString.Length - 2);
@@ -78,5 +91,12 @@ public class SocketListener : MonoBehaviour {
 	void Update() {
 		// Set this object's position in the scene according to the position received
 		transform.position = position;
+	}
+
+	void OnApplicationQuit() {
+		if (pythonProcess != null && !pythonProcess.HasExited) {
+			pythonProcess.Kill();
+			UnityEngine.Debug.Log("Python server stopped.");
+		}
 	}
 }

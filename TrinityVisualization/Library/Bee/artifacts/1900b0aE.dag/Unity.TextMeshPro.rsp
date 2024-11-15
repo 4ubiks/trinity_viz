@@ -325,6 +325,7 @@
 -r:"C:/Users/Cayden Park/Documents/trinity_viz/TrinityVisualization/Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
 -r:"C:/Users/Cayden Park/Documents/trinity_viz/TrinityVisualization/Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
 -r:"C:/Users/Cayden Park/Documents/trinity_viz/TrinityVisualization/Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/unityplastic.dll"
+-r:"C:/Users/Cayden Park/Documents/trinity_viz/TrinityVisualization/Library/PackageCache/com.unity.scripting.python@7.0.2/Editor/Lib/x64/Python.Runtime.dll"
 -r:"C:/Users/Cayden Park/Documents/trinity_viz/TrinityVisualization/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"C:/Users/Cayden Park/Documents/trinity_viz/TrinityVisualization/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll"
 -r:"C:/Users/Cayden Park/Documents/trinity_viz/TrinityVisualization/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll"
