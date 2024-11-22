@@ -1,4 +1,5 @@
 import socket
+import struct
 
 # Host server setup
 host = '127.0.0.1'  # Localhost
@@ -11,6 +12,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     conn, addr = s.accept()
     with conn:
         print(f"Connected by {addr}")
-        # Send some data to Blender
-        message = "Hello from the server!"
-        conn.sendall(message.encode())
+        # Send the integer as raw bytes
+        message = 15
+        packed_message = struct.pack('!i', message)  # Pack integer 'message' to bytes (big-endian)
+        conn.sendall(packed_message)  # Send the raw bytes
