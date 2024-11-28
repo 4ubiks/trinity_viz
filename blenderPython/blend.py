@@ -1,7 +1,10 @@
+# updated on: 27 November 2024
+# updated by: Jack Harris
+
 import bpy
 import socket
 import struct
-
+import threading
 
 
 def client():
@@ -20,13 +23,21 @@ def client():
         rotation_angle = unpacked_data[0]  # This is the received integer value (e.g., 15)
 
         print(f"Received rotation angle: {rotation_angle}")
-        
+            
         rotation_angle = (rotation_angle * 3.1415926535790) / 180
 
-        # Apply the rotation to an object (for example, the active object)
-        if bpy.context.active_object:
-            bpy.context.active_object.rotation_euler[2] += rotation_angle  # Rotate on the Z axis
+        bpy.app.timers.register(lambda: rotate(rotation_angle))
     c.close()
+        
+def rotate(rotation_angle):
+    if bpy.context.active_object:
+       bpy.context.active_object.rotation_euler[2] += rotation_angle
+       print(f"rotating by: {rotation_angle}")
+    else:
+        print(f"no selected object")
+    #print('hi')
+    return None
 
 if __name__ == '__main__':
-    client()    
+    threading.Thread(target=client, daemon=True).start()
+

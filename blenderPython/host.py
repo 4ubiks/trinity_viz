@@ -1,3 +1,6 @@
+# updated on: 27 November 2024
+# updated by: Jack Harris
+
 import socket
 import struct
 import threading
