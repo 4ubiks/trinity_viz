@@ -5,7 +5,7 @@ import struct
 
 
 def client():
-    host = '127.0.0.1'
+    host = '192.168.0.166'
     port = 65432
 
     # Establish socket connection to the server
