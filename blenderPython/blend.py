@@ -1,6 +1,9 @@
 # updated on: 27 November 2024
 # updated by: Jack Harris
 
+# this is what runs inside blender. 
+# do not try to run this on a host machine, it won't work. 
+
 import bpy
 import socket
 import struct
@@ -8,7 +11,7 @@ import threading
 
 
 def client():
-    host = '192.168.0.166'
+    host = '192.168.0.166'                    # ip address of a test device, this can change
     port = 65432
 
     # Establish socket connection to the server
@@ -24,20 +27,23 @@ def client():
 
         print(f"Received rotation angle: {rotation_angle}")
             
+        # convert to degrees 
         rotation_angle = (rotation_angle * 3.1415926535790) / 180
 
+        # calls the rotation function, uses `lambda` as a wrapper because we are passing a value
         bpy.app.timers.register(lambda: rotate(rotation_angle))
     c.close()
         
 def rotate(rotation_angle):
+    # check there is an active or target object
     if bpy.context.active_object:
        bpy.context.active_object.rotation_euler[2] += rotation_angle
        print(f"rotating by: {rotation_angle}")
     else:
         print(f"no selected object")
-    #print('hi')
     return None
 
 if __name__ == '__main__':
+    # runs the process on a specific thread to prevent blender from crashing
     threading.Thread(target=client, daemon=True).start()
 

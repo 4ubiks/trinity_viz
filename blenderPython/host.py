@@ -1,6 +1,8 @@
 # updated on: 27 November 2024
 # updated by: Jack Harris
 
+# this is to run on the ground station, retrieving data from the rocket. 
+
 import socket
 import struct
 import time
