@@ -18,7 +18,7 @@ def client_handler(conn, addr):
             print(f"Sent message: {message}")
             
             # Wait for 5 seconds before sending the next packet
-            time.sleep(5)
+            time.sleep(0.5)
     except (ConnectionResetError, BrokenPipeError):
         print(f"Connection closed with {addr}")
     finally:
