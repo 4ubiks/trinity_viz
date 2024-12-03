@@ -7,20 +7,21 @@ import socket
 import struct
 import time
 import threading
+import random
 
-host = '192.168.0.166'
+host = '127.0.0.1'
 port = 65432
 
 def client_handler(conn, addr):
     print(f"Connected by {addr}")
     try:
         while True:
-            message = 15
+            message = random.randint(15, 30)
             packed_message = struct.pack('!i', message)
             
             # Send message and check for any socket errors
             conn.sendall(packed_message)
-            print(f"Sent message: {message}")
+            print(f"Rotational Value: {message} degrees")
             
             # Wait for 5 seconds before sending the next packet
             time.sleep(0.5)
