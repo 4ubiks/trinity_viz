@@ -4,3 +4,11 @@ repository for Liberty Rocketry, centered around data communication for the rock
 
 ## goals:
 creating a system that allows real-time data transmission from a receiver to our ground station (primarily using Python for functionality), communicating with Unity (C#) to project live data onto a 3D render of our rocket's launch. 
+
+# DATA TO BE DISPLAYED:
+
+`Altitude`<br>
+`Longitude` <br>
+`Lattitude`<br>
+`Horizontal Velocity` (hamburger) <br>
+`Vertical Velocity` (hot dog) <br>
