@@ -12,3 +12,4 @@ creating a system that allows real-time data transmission from a receiver to our
 `Lattitude`<br>
 `Horizontal Velocity` (hamburger) <br>
 `Vertical Velocity` (hot dog) <br>
+`Timer` (from launch)<br>
