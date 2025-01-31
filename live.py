@@ -62,17 +62,6 @@ def connect_serial(com_port: str) -> None:
 
     ser.close()
 
-"""
-def thread():
-    for i in range(50):
-        print(f"Counting thread: {i}")
-        time.sleep(1)
-
-def live_data_th() -> th.Thread:
-    t = th.Thread(target=thread, args=[])
-    t.start()
-    return t
-"""
 if __name__ == '__main__':
     connect_serial('COM4')
 else:
